@@ -1,0 +1,40 @@
+@import "parts/_misc";
+@import "parts/mixins";
+@import "parts/_colors";
+@import "parts/_typography";
+@import "parts/general";
+
+#app {
+  margin: 0;
+  padding: 0;
+  .content {
+    width: 100%;
+    min-height: 100vh;
+    margin: auto;
+    @include respond-to(medium) {
+      max-width: 40rem;
+    }
+    @include respond-to(wide) {
+      max-width: 60rem;
+    }
+  }
+}
+
+#hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  &.standard-link {
+    text-decoration: none;
+    color: $primary;
+    position: relative;
+    display: inline-block;
+  }
+}

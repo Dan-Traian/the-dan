@@ -1,0 +1,26 @@
+.border-test {
+  border: 1px solid red;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+*::-webkit-scrollbar {
+  width: 2px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #c2c4c6;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #3b34f3;
+  outline: none;
+}

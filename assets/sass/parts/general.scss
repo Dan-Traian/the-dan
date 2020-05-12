@@ -1,0 +1,42 @@
+// General
+
+@import url("https://rsms.me/inter/inter-ui.css");
+$red: #d0021b;
+$black: #192735;
+$pink: #ffecec;
+
+html {
+  box-sizing: border-box;
+  font-family: "Inter UI", sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: $black;
+  scroll-behavior: smooth;
+}
+
+body {
+  animation: fadeIn ease 4s;
+  -webkit-animation: fadeIn ease 4s;
+  -moz-animation: fadeIn ease 4s;
+  -o-animation: fadeIn ease 4s;
+  -ms-animation: fadeIn ease 4s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.slim-wrapper {
+  max-width: 1024px;
+  margin: auto;
+
+  @include respond-to(large) {
+    padding: 0 24px;
+  }
+}
