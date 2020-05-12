@@ -1,0 +1,16 @@
+@tailwind base;
+
+/**
+ * Abstracts classes and styles
+ */
+@import "abstracts/mixins";
+
+/**
+ * Base classes and styles
+ */
+@import "base/_reset";
+@import "base/typography";
+@import "molecular/buttons";
+@import "molecular/transitions";
+
+@tailwind utilities;
