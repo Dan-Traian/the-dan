@@ -30,8 +30,8 @@ function innit() {
 
 function setupPointerEvents() {
   document.addEventListener("mousemove", (event) => {
-    POINTER.style.left = event.clientX + "px";
-    POINTER.style.top = event.clientY + "px";
+    POINTER.style.left = event.pageX - document.body.scrollLeft + "px";
+    POINTER.style.top = event.pageY - document.body.scrollTop + "px";
     addCircle(event);
   });
   document.addEventListener("mousedown", (event) => {

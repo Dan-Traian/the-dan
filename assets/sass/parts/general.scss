@@ -31,12 +31,3 @@ body {
     opacity: 1;
   }
 }
-
-.slim-wrapper {
-  max-width: 1024px;
-  margin: auto;
-
-  @include respond-to(large) {
-    padding: 0 24px;
-  }
-}

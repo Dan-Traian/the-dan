@@ -16,6 +16,7 @@
   z-index: 800;
   border: 1px solid transparent;
   transition: border-color 0.1s ease-in, width 0.1s ease-in, height 0.1s ease-in, background-color 0.1s ease-in-out;
+  pointer-events: none;
   &.clicked {
     border: 1px solid $rhino;
     width: 40px;

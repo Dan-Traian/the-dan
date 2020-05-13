@@ -6,43 +6,6 @@
 @import "parts/scene";
 @import "parts/loader";
 
-#app {
-  margin: 0;
-  padding: 0;
-  overflow-y: hidden;
-  .content {
-    width: 100%;
-    min-height: 100vh;
-    margin: auto;
-    @include respond-to(medium) {
-      max-width: 40rem;
-    }
-    @include respond-to(wide) {
-      max-width: 60rem;
-    }
-  }
-}
-
-#hero {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0 20px;
-  .image {
-    display: none;
-  }
-  @include respond-to(wide) {
-    flex-direction: row;
-    justify-content: space-between;
-    .image {
-      display: block;
-    }
-  }
-}
-
 .link {
   text-decoration: none;
   color: inherit;
