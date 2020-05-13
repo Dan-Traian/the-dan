@@ -8,6 +8,10 @@
   cursor: pointer;
 }
 
+html {
+  cursor: none;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -160,6 +164,68 @@ body {
   margin: auto;
 }
 
+#app {
+  position: relative;
+}
+#app .content {
+  position: relative;
+  z-index: 400;
+  background-color: transparent;
+}
+
+#pointer {
+  position: absolute;
+  background-color: #4c4b5d;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%);
+  z-index: 800;
+  border: 1px solid transparent;
+  transition: border-color 0.1s ease-in, width 0.1s ease-in, height 0.1s ease-in, background-color 0.1s ease-in-out;
+}
+#pointer.clicked {
+  border: 1px solid #4c4b5d;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+}
+
+#scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ffdfdf;
+  z-index: 10;
+}
+#scene .circle {
+  position: absolute;
+  border-radius: 100%;
+  width: 15vw;
+  height: 15vw;
+  transform: translate(-50%, -50%);
+  transition: width 1s ease-in-out, height 1s ease-in-out;
+  animation: bgChange 0.5s ease-in-out forwards;
+}
+#scene .circle.darkened {
+  background-color: #2643f7;
+}
+#scene .circle.maximised {
+  width: 200vw;
+  height: 200vw;
+}
+
+@keyframes bgChange {
+  from {
+    background-color: #887efb;
+  }
+  to {
+    background-color: #877dfb;
+  }
+}
 #app {
   margin: 0;
   padding: 0;

@@ -5,6 +5,9 @@
 .pointer {
   cursor: pointer;
 }
+html {
+  cursor: none;
+}
 
 * {
   box-sizing: border-box;

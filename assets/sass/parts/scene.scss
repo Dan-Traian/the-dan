@@ -1,0 +1,60 @@
+#app {
+  position: relative;
+  .content {
+    position: relative;
+    z-index: 400;
+    background-color: transparent;
+  }
+}
+#pointer {
+  position: absolute;
+  background-color: $grey-dark;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%);
+  z-index: 800;
+  border: 1px solid transparent;
+  transition: border-color 0.1s ease-in, width 0.1s ease-in, height 0.1s ease-in, background-color 0.1s ease-in-out;
+  &.clicked {
+    border: 1px solid $grey-dark;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+  }
+}
+#scene {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: $secondary-light;
+  z-index: 10;
+  .circle {
+    position: absolute;
+    border-radius: 100%;
+    width: 15vw;
+    height: 15vw;
+    transform: translate(-50%, -50%);
+    transition: width 1s ease-in-out, height 1s ease-in-out;
+    animation: bgChange 0.5s ease-in-out forwards;
+    &.darkened {
+      background-color: $primary;
+    }
+    &.maximised {
+      width: 200vw;
+      height: 200vw;
+    }
+  }
+}
+
+@keyframes bgChange {
+  from {
+    background-color: lighten($color: $primary-light, $amount: 0.2);
+  }
+  to {
+    background-color: $primary-light;
+  }
+}
