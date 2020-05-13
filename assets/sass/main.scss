@@ -4,6 +4,7 @@
 @import "parts/_typography";
 @import "parts/general";
 @import "parts/scene";
+@import "parts/loader";
 
 #app {
   margin: 0;
@@ -47,7 +48,7 @@
   color: inherit;
   &.standard-link {
     text-decoration: none;
-    color: $primary;
+    color: $blue-ribbon;
     position: relative;
     display: inline-block;
   }

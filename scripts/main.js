@@ -12,9 +12,21 @@ const colorsVariations = {
 let currentThemeIndex = "";
 
 (function () {
+  innit();
+
+  // document.querySelector("#loader .box").addEventListener("animationend", () => {
+  //   document.querySelector("#loader").classList.add("fadeOut");
+  //   document.querySelector("#app").style.display = "block";
+  //   document.querySelector("#loader").addEventListener("transitionend", () => {
+  //     document.querySelector("#loader").style.display = "none";
+  //     innit();
+  //   });
+  // });
+})();
+function innit() {
   updateNextColorTheme();
   setTimeout(setupPointerEvents(), 400);
-})();
+}
 
 function setupPointerEvents() {
   document.addEventListener("mousemove", (event) => {

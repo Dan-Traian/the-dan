@@ -1,0 +1,40 @@
+// #app {
+//   display: none;
+// }
+#loader {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: $pink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  transition-delay: 0.5s;
+  &.fadeOut {
+    opacity: 0;
+  }
+  .box {
+    width: 5vw;
+    height: 5vw;
+    background-color: $shamrock;
+    animation: scaleIn 3s ease-in-out forwards;
+    animation-delay: 0.5s;
+    transform-origin: top;
+    animation-delay: 0.5s;
+    transform: scaleY(0.1);
+  }
+}
+@keyframes scaleIn {
+  from {
+    transform: scaleY(0.1);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
