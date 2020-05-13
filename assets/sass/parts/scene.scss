@@ -30,7 +30,6 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: $secondary-light;
   z-index: 10;
   .circle {
     position: absolute;
@@ -39,7 +38,15 @@
     height: 15vw;
     transform: translate(-50%, -50%);
     transition: width 1s ease-in-out, height 1s ease-in-out;
-    animation: bgChange 0.5s ease-in-out forwards;
+    &.cyan {
+      animation: bgChangeCyan 0.5s ease-in-out forwards;
+    }
+    &.yellow {
+      animation: bgChangeYellow 0.5s ease-in-out forwards;
+    }
+    &.pink {
+      animation: bgChangePink 0.5s ease-in-out forwards;
+    }
     &.darkened {
       background-color: $primary;
     }
@@ -50,11 +57,38 @@
   }
 }
 
-@keyframes bgChange {
+.bg-cyan {
+  background-color: $cyan;
+}
+.bg-yellow {
+  background-color: $yellow;
+}
+.bg-pink {
+  background-color: $pink;
+}
+
+@keyframes bgChangeCyan {
   from {
-    background-color: lighten($color: $primary-light, $amount: 0.2);
+    background-color: $cyan-f;
   }
   to {
-    background-color: $primary-light;
+    background-color: $cyan;
+  }
+}
+
+@keyframes bgChangeYellow {
+  from {
+    background-color: $yellow-f;
+  }
+  to {
+    background-color: $yellow;
+  }
+}
+@keyframes bgChangePink {
+  from {
+    background-color: $pink-f;
+  }
+  to {
+    background-color: $pink;
   }
 }

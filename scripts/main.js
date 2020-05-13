@@ -1,12 +1,19 @@
-window.onload = function () {
-  init();
-};
 const SCENE = document.getElementById("scene");
 const POINTER = document.getElementById("pointer");
 let nrOfCurrentCircles = 0;
-function init() {
+let isResetting = false;
+
+const colorsVariations = {
+  pink: "cyan",
+  cyan: "yellow",
+  yellow: "pink",
+};
+let currentThemeIndex = "";
+
+(function () {
+  updateNextColorTheme();
   setTimeout(setupPointerEvents(), 400);
-}
+})();
 
 function setupPointerEvents() {
   document.addEventListener("mousemove", (event) => {
@@ -23,10 +30,10 @@ function setupPointerEvents() {
 }
 
 function addCircle(mouseEvent) {
-  if (nrOfCurrentCircles > 300) resetScene();
-  else {
+  if (nrOfCurrentCircles < 300) {
     var newDiv = document.createElement("div");
     newDiv.classList.add("circle");
+    newDiv.classList.add(colorsVariations[currentThemeIndex]);
     newDiv.style.left = mouseEvent.clientX + "px";
     newDiv.style.top = mouseEvent.clientY + "px";
 
@@ -34,17 +41,35 @@ function addCircle(mouseEvent) {
     var currentDiv = document.getElementById("div1");
     SCENE.appendChild(newDiv);
     nrOfCurrentCircles++;
+  } else if (nrOfCurrentCircles === 300 && !isResetting) {
+    resetScene();
   }
 }
 
 function resetScene() {
+  isResetting = true;
   console.log("need to clean");
   let circles = SCENE.querySelectorAll(".circle");
   circles[circles.length - 1].classList.add("maximised");
+
+  // setting new background color;
+  setTimeout(() => {
+    updateNextColorTheme();
+  }, 1010);
+  // clearing all circles
   setTimeout(() => {
     SCENE.innerHTML = "";
-  }, 1200);
+  }, 2400);
+  // resetting and allowing drawing
   setTimeout(() => {
     nrOfCurrentCircles = 0;
+    isResetting = false;
   }, 2400);
+}
+
+function updateNextColorTheme() {
+  SCENE.classList = "";
+  currentThemeIndex = currentThemeIndex === "" ? "pink" : colorsVariations[currentThemeIndex];
+  SCENE.classList.add("bg-" + currentThemeIndex);
+  console.log("updated scene bg to color : " + currentThemeIndex);
 }
