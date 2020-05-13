@@ -1,7 +1,7 @@
 const SCENE = document.getElementById("scene");
 const POINTER = document.getElementById("pointer");
 let nrOfCurrentCircles = 0;
-let maxNrOfCirclesAllowed = isMobile ? 1 : 300;
+let maxNrOfCirclesAllowed = isMobile() ? 1 : 300;
 let isResetting = false;
 
 const colorsVariations = {
