@@ -1,6 +1,7 @@
 const SCENE = document.getElementById("scene");
 const POINTER = document.getElementById("pointer");
 let nrOfCurrentCircles = 0;
+let maxNrOfCirclesAllowed = isMobile ? 1 : 300;
 let isResetting = false;
 
 const colorsVariations = {
@@ -30,7 +31,7 @@ function setupPointerEvents() {
 }
 
 function addCircle(mouseEvent) {
-  if (nrOfCurrentCircles < 300) {
+  if (nrOfCurrentCircles < maxNrOfCirclesAllowed) {
     var newDiv = document.createElement("div");
     newDiv.classList.add("circle");
     newDiv.classList.add(colorsVariations[currentThemeIndex]);
@@ -41,7 +42,7 @@ function addCircle(mouseEvent) {
     var currentDiv = document.getElementById("div1");
     SCENE.appendChild(newDiv);
     nrOfCurrentCircles++;
-  } else if (nrOfCurrentCircles === 300 && !isResetting) {
+  } else if (nrOfCurrentCircles === maxNrOfCirclesAllowed && !isResetting) {
     resetScene();
   }
 }
@@ -72,4 +73,8 @@ function updateNextColorTheme() {
   currentThemeIndex = currentThemeIndex === "" ? "pink" : colorsVariations[currentThemeIndex];
   SCENE.classList.add("bg-" + currentThemeIndex);
   console.log("updated scene bg to color : " + currentThemeIndex);
+}
+
+function isMobile() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }

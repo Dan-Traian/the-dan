@@ -4,11 +4,14 @@ $red: #d0021b;
 $black: #192735;
 $pink: #ffecec;
 
+body {
+  font-family: "Inter UI", sans-serif;
+}
 h1 {
   font-size: 64px;
   margin-bottom: 16px;
   margin-top: 0;
-  font-family: "Averia Gruesa Libre", serif;
+
   color: $black;
 
   @include respond-to(medium) {
@@ -18,7 +21,7 @@ h1 {
 h2 {
   margin-top: 0;
   margin-bottom: 0;
-  font-family: "Averia Gruesa Libre", serif;
+
   color: $black;
   text-decoration: none;
   font-size: 48px;
@@ -101,7 +104,6 @@ h6 {
   }
 
   ul a {
-    font-family: "Inter UI", sans-serif;
     font-size: 14px;
     font-weight: 400;
     text-decoration: none;
@@ -120,7 +122,6 @@ h6 {
 }
 
 h4 {
-  font-family: "Inter UI", sans-serif;
   font-size: 20px;
   display: block;
   font-weight: 300;

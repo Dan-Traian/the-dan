@@ -8,6 +8,7 @@
 #app {
   margin: 0;
   padding: 0;
+  overflow-y: hidden;
   .content {
     width: 100%;
     min-height: 100vh;
@@ -25,8 +26,20 @@
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 0 20px;
+  .image {
+    display: none;
+  }
+  @include respond-to(wide) {
+    flex-direction: row;
+    justify-content: space-between;
+    .image {
+      display: block;
+    }
+  }
 }
 
 .link {
