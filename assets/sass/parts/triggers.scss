@@ -1,0 +1,45 @@
+.trigger {
+  position: fixed;
+  z-index: 1000;
+  right: 0;
+}
+.t-0 {
+  top: 0vh;
+}
+.t-20 {
+  top: 20vh;
+}
+.t-30 {
+  top: 30vh;
+}
+.t-40 {
+  top: 40vh;
+}
+.t-50 {
+  top: 50vh;
+}
+.t-60 {
+  top: 60vh;
+}
+.t-70 {
+  top: 70vh;
+}
+.t-80 {
+  top: 80vh;
+}
+.t-90 {
+  top: 90vh;
+}
+.t-100 {
+  top: 100vh;
+}
+.textIntitial {
+  transform: translateY(20%);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.textVisible {
+  transform: translateY(0%);
+  opacity: 1;
+}

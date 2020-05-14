@@ -3,8 +3,11 @@
 @import "parts/_colors";
 @import "parts/_typography";
 @import "parts/general";
+
+// custom scss
 @import "parts/scene";
 @import "parts/loader";
+@import "parts/triggers";
 
 .link {
   text-decoration: none;
