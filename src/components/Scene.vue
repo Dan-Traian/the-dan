@@ -19,7 +19,7 @@ export default {
       scene: null,
       pointer: null,
       nrOfCurrentCircles: 0,
-      maxNrOfCirclesAllowed: 300,
+      maxNrOfCirclesAllowed: 600,
       isResetting: false,
       colorsVariations: {
         pink: "cyan",

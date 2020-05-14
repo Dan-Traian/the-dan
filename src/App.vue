@@ -4,14 +4,14 @@
 
     <scene></scene>
 
-    <div class="content w-full lg:max-w-6xl mx-auto">
+    <div class="content w-full lg:max-w-xl xl:max-w-6xl 2xl:max-w-8xl mx-auto border-test">
       <hero></hero>
 
-      <!--      <div class="spacer w-full py-20"></div>-->
+      <div class="spacer w-full py-20"></div>
 
       <!--      <what-now></what-now>-->
 
-      <!--      <div class="spacer w-full py-20"></div>-->
+      <div class="spacer w-full py-20"></div>
 
       <!--      <background></background>-->
 
