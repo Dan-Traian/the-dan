@@ -1,0 +1,56 @@
+#app {
+  position: relative;
+  .content {
+    position: relative;
+    z-index: 400;
+    background-color: transparent;
+  }
+}
+#pointer {
+  position: absolute;
+  background-color: $rhino;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%);
+  z-index: 800;
+  border: 1px solid transparent;
+  transition: border-color 0.1s ease-in, width 0.1s ease-in, height 0.1s ease-in, background-color 0.1s ease-in-out;
+  pointer-events: none;
+  &.clicked {
+    border: 1px solid $rhino;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+  }
+}
+
+#scene {
+  .circle {
+    width: 40vw;
+    height: 40vw;
+    @include respond-to(wide) {
+      width: 15vw;
+      height: 15vw;
+    }
+  }
+}
+
+.bg-cyan,
+.bg-cyan2 {
+  background-color: $cyan;
+}
+.bg-yellow {
+  background-color: $yellow;
+}
+.bg-pink {
+  background-color: $pink;
+}
+.bg-orange {
+  background-color: $orange;
+}
+
+@include keyframesBg("bgChangeCyan", $cyan-f, $cyan);
+@include keyframesBg("bgChangeYellow", $yellow-f, $yellow);
+@include keyframesBg("bgChangePink", $pink-f, $pink);
+@include keyframesBg("bgChangeOrange", $orange-f, $orange);

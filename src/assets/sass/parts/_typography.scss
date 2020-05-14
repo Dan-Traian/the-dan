@@ -1,15 +1,10 @@
 @import url("https://rsms.me/inter/inter-ui.css");
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-
-$red: #d0021b;
-$black: #192735;
-$pink: #ffecec;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
 
 body,
 * {
-  // font-family: "Inter UI", sans-serif;
-  // font-family: "Space Grotesk", sans-serif;
   font-family: "Poppins", sans-serif;
 }
 
@@ -44,8 +39,20 @@ body,
 }
 
 .medium {
-  font-weight: medium;
+  font-weight: 400;
 }
 .bold {
   font-weight: bold;
+}
+.number-text {
+  font-size: calc(45vw / 4);
+  line-height: 90%;
+  margin: 0;
+  padding: 0;
+  color: $black;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $black;
+  font-family: "Montserrat", sans-serif;
+  direction: rtl;
 }

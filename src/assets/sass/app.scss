@@ -1,4 +1,5 @@
-@import "parts/_misc";
+@tailwind base;
+
 @import "parts/mixins";
 @import "parts/_colors";
 @import "parts/_typography";
@@ -19,3 +20,5 @@
     display: inline-block;
   }
 }
+
+@tailwind utilities;

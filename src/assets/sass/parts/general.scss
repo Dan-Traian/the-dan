@@ -1,10 +1,6 @@
-// General
-
-@import url("https://rsms.me/inter/inter-ui.css");
-$red: #d0021b;
-$black: #192735;
-$pink: #ffecec;
-
+* {
+  box-sizing: border-box;
+}
 html {
   box-sizing: border-box;
   font-family: "Inter UI", sans-serif;
@@ -12,6 +8,8 @@ html {
   -webkit-text-size-adjust: 100%;
   color: $black;
   scroll-behavior: smooth;
+  cursor: none;
+  overflow-x: hidden;
 }
 
 body {
@@ -20,6 +18,17 @@ body {
   -moz-animation: fadeIn ease 4s;
   -o-animation: fadeIn ease 4s;
   -ms-animation: fadeIn ease 4s;
+
+  margin: 0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.border-test {
+  border: 1px solid red;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 @keyframes fadeIn {
@@ -30,4 +39,17 @@ body {
   100% {
     opacity: 1;
   }
+}
+
+*::-webkit-scrollbar {
+  width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #c2c4c6;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #3b34f3;
+  outline: none;
 }
