@@ -9,11 +9,11 @@
 
       <!--      <div class="spacer w-full py-20"></div>-->
 
-      <what-now></what-now>
+      <!--      <what-now></what-now>-->
 
       <!--      <div class="spacer w-full py-20"></div>-->
 
-      <background></background>
+      <!--      <background></background>-->
 
       <!--      <div class="spacer w-full py-20"></div>-->
 
@@ -35,7 +35,9 @@ export default {
   components: {
     scene: Scene,
     hero: Hero,
+    // eslint-disable-next-line vue/no-unused-components
     whatNow: WhatNow,
+    // eslint-disable-next-line vue/no-unused-components
     background: Background,
     contact: Contact,
   },
