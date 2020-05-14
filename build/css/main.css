@@ -231,7 +231,7 @@ body {
     height: 15vw;
   }
 }
-#scene .circle.cyan {
+#scene .circle.cyan, #scene .circle.cyan2 {
   animation: bgChangeCyan 0.5s ease-in-out forwards;
 }
 #scene .circle.yellow {
@@ -240,12 +240,16 @@ body {
 #scene .circle.pink {
   animation: bgChangePink 0.5s ease-in-out forwards;
 }
+#scene .circle.orange {
+  animation: bgChangeOrange 0.5s ease-in-out forwards;
+}
 #scene .circle.maximised {
   width: 300vw;
   height: 300vw;
 }
 
-.bg-cyan {
+.bg-cyan,
+.bg-cyan2 {
   background-color: #239dc9;
 }
 
@@ -255,6 +259,10 @@ body {
 
 .bg-pink {
   background-color: #ffecec;
+}
+
+.bg-orange {
+  background-color: #e35f47;
 }
 
 @keyframes bgChangeCyan {
@@ -279,6 +287,14 @@ body {
   }
   to {
     background-color: #ffecec;
+  }
+}
+@keyframes bgChangeOrange {
+  from {
+    background-color: #fe8b69;
+  }
+  to {
+    background-color: #e35f47;
   }
 }
 #loader {

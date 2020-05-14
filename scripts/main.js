@@ -7,7 +7,9 @@ let isResetting = false;
 const colorsVariations = {
   pink: "cyan",
   cyan: "yellow",
-  yellow: "pink",
+  yellow: "cyan2",
+  cyan2: "orange",
+  orange: "pink",
 };
 let currentThemeIndex = "";
 
@@ -32,7 +34,7 @@ function setupPointerEvents() {
   document.addEventListener("mousemove", (event) => {
     POINTER.style.left = event.pageX - document.body.scrollLeft + "px";
     POINTER.style.top = event.pageY - document.body.scrollTop + "px";
-    // addCircle(event);
+    addCircle(event);
   });
   document.addEventListener("mousedown", (event) => {
     POINTER.classList.add("clicked");

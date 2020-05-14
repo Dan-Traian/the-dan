@@ -43,7 +43,8 @@
       width: 15vw;
       height: 15vw;
     }
-    &.cyan {
+    &.cyan,
+    &.cyan2 {
       animation: bgChangeCyan 0.5s ease-in-out forwards;
     }
     &.yellow {
@@ -51,6 +52,9 @@
     }
     &.pink {
       animation: bgChangePink 0.5s ease-in-out forwards;
+    }
+    &.orange {
+      animation: bgChangeOrange 0.5s ease-in-out forwards;
     }
 
     &.maximised {
@@ -60,7 +64,8 @@
   }
 }
 
-.bg-cyan {
+.bg-cyan,
+.bg-cyan2 {
   background-color: $cyan;
 }
 .bg-yellow {
@@ -68,6 +73,9 @@
 }
 .bg-pink {
   background-color: $pink;
+}
+.bg-orange {
+  background-color: $orange;
 }
 
 @keyframes bgChangeCyan {
@@ -93,5 +101,13 @@
   }
   to {
     background-color: $pink;
+  }
+}
+@keyframes bgChangeOrange {
+  from {
+    background-color: $orange-f;
+  }
+  to {
+    background-color: $orange;
   }
 }
