@@ -29,6 +29,7 @@
   .circle {
     width: 40vw;
     height: 40vw;
+    transform: scale(0.7, 0.7);
     @include respond-to(wide) {
       width: 15vw;
       height: 15vw;

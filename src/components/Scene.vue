@@ -19,7 +19,7 @@ export default {
       scene: null,
       pointer: null,
       nrOfCurrentCircles: 0,
-      maxNrOfCirclesAllowed: 600,
+      maxNrOfCirclesAllowed: 1,
       isResetting: false,
       colorsVariations: {
         pink: "cyan",
@@ -32,7 +32,9 @@ export default {
     };
   },
 
-  created() {},
+  created() {
+    this.maxNrOfCirclesAllowed = this.isMobile() ? 1 : 300;
+  },
 
   mounted() {
     this.scene = document.getElementById("scene");
@@ -65,7 +67,6 @@ export default {
     },
 
     addCircle(mouseEvent) {
-      console.log("adding circle", this.nrOfCurrentCircles);
       if (this.nrOfCurrentCircles < this.maxNrOfCirclesAllowed) {
         let newDiv = document.createElement("div");
         newDiv.classList.add("circle");
@@ -84,24 +85,19 @@ export default {
       this.currentThemeIndex = this.currentThemeIndex === "" ? "pink" : this.colorsVariations[this.currentThemeIndex];
 
       this.scene.classList.add("bg-" + this.currentThemeIndex);
-      console.log("updated scene bg to color : " + this.currentThemeIndex);
     },
 
     resetScene() {
       this.isResetting = true;
-      console.log("need to clean");
       let circles = this.scene.querySelectorAll(".circle");
       circles[circles.length - 1].classList.add("maximised");
 
-      // setting new background color;
       setTimeout(() => {
         this.updateNextColorTheme();
       }, 1010);
-      // clearing all circles
       setTimeout(() => {
         this.scene.innerHTML = "";
       }, 2400);
-      // resetting and allowing drawing
       setTimeout(() => {
         this.nrOfCurrentCircles = 0;
         this.isResetting = false;

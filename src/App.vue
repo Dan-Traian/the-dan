@@ -4,17 +4,12 @@
 
     <scene></scene>
 
-    <div class="content w-full lg:max-w-xl xl:max-w-6xl 2xl:max-w-8xl mx-auto border-test">
+    <div class="content w-full md:w-4/5 lg:max-w-7xl xl:max-w-10xl px-10 lg:px-0 mx-auto">
       <hero></hero>
-
-      <div class="spacer w-full py-20"></div>
-
+      <div class="spacer w-full py-10 md:py-20"></div>
       <!--      <what-now></what-now>-->
-
-      <div class="spacer w-full py-20"></div>
-
+      <div class="spacer w-full py-10 md:py-20"></div>
       <!--      <background></background>-->
-
       <!--      <div class="spacer w-full py-20"></div>-->
 
       <contact></contact>

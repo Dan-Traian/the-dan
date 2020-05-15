@@ -33,12 +33,23 @@
 .t-100 {
   top: 100vh;
 }
-.textIntitial {
+.textInitial {
   transform: translateY(20%);
   opacity: 0;
+  transition-delay: 0.3s;
+}
+.delay-xs {
   transition: all 0.5s ease-in-out;
 }
-
+.delay-sm {
+  transition: all 0.8s ease-in-out;
+}
+.delay-md {
+  transition: all 0.9s ease-in-out;
+}
+.delay-lg {
+  transition: all 1s ease-in-out;
+}
 .textVisible {
   transform: translateY(0%);
   opacity: 1;

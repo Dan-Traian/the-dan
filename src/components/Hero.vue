@@ -1,12 +1,12 @@
 <template>
-  <section id="hero" class="w-full flex pt-10 px-10 xl:px-0 lg:mt-32">
-    <span class="text mt-20" id="introText">
-      <p class="text-3xl md:text-4xl lg:text-6xl 2xl:text-8xl light relaxed">
-        Hello! I'm <span class="bold">Dan Traian.</span> <br />
-        I have a passion for building highly polished user-experiences, and enjoy seeing them developed to the very end.
-        I strive to work in cross-disciplinary teams to innovate and deliver!
+  <section id="hero" class="w-full flex lg:pt-32 mac:pt-64 ">
+    <div class="text lg:pt-32 mac:pt-64" id="introText">
+      <p class="text-intro light">
+        Hello! I'm Dan Traian! <br class="hidden lg:block" />I have a passion for building highly polished user
+        experiences, and enjoy seeing them developed to the very end. I strive to work in cross-disciplinary teams to
+        innovate and deliver!
       </p>
-    </span>
+    </div>
   </section>
 </template>
 
@@ -37,3 +37,4 @@ export default {
   methods: {},
 };
 </script>
+<style lang="scss"></style>
