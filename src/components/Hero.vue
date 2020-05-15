@@ -1,18 +1,18 @@
 <template>
   <section id="hero" class="w-full flex lg:pt-32 mac:pt-64 ">
     <div class="text pt-32 mac:pt-64" id="introText">
-      <p class="text-intro light">
-        Hello! I'm Dan Traian! <br class="hidden lg:block" />I have a passion for building highly polished user
-        experiences, and enjoy seeing them developed to the very end. I strive to work in cross-disciplinary teams to
-        innovate and deliver!
+      <p class="text-intro light text-animate" v-animate-text v-observe-visibility="animateTextIn">
+        Hello! I'm Dan Traian! I have a passion for building highly polished user experiences, and enjoy seeing them
+        developed to the very end. I strive to work in cross-disciplinary teams to innovate and deliver!
       </p>
     </div>
   </section>
 </template>
-
+<div><span></span></div>
 <script>
+import { globalMixin } from "../mixins/GlobalMixin";
 export default {
-  mixins: [],
+  mixins: [globalMixin],
 
   components: {},
 

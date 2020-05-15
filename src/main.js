@@ -2,6 +2,9 @@ import Vue from "vue";
 import Axios from "axios";
 
 import { ObserveVisibility } from "vue-observe-visibility";
+import AnimateText from "./directives/AnimateText";
+
+Vue.directive("animate-text", AnimateText);
 
 Vue.directive("observe-visibility", ObserveVisibility);
 

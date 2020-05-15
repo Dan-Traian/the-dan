@@ -3,8 +3,9 @@
 </template>
 
 <script>
+import { globalMixin } from "../mixins/GlobalMixin";
 export default {
-  mixins: [],
+  mixins: [globalMixin],
 
   components: {},
 
@@ -102,9 +103,6 @@ export default {
         this.nrOfCurrentCircles = 0;
         this.isResetting = false;
       }, 2400);
-    },
-    isMobile() {
-      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     },
   },
 };

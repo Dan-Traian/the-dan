@@ -106,3 +106,31 @@ body,
   font-family: "Montserrat", sans-serif;
   direction: rtl;
 }
+
+.text-animate{
+  display: flex;
+  flex-wrap: wrap;
+  div{
+    display: block;
+    margin-right: 35px;
+    //border:1px solid red;
+    overflow: hidden;
+    span{
+      display: block;
+     animation-delay: 1s;
+      transform-origin: top left;
+      transform : rotate(5deg) translate(0%, 100%);
+      &.active{
+        animation: slidein 1s ease-in-out forwards;
+      }
+    }
+  }
+}
+@keyframes slidein {
+  from{
+    transform : rotate(5deg) translate(0%, 100%);
+  }
+  to{
+    transform : rotate(0deg) translate(0%,0%);
+  }
+}

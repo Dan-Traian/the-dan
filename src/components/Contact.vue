@@ -1,12 +1,20 @@
 <template
-  ><section id="contact" class="w-full flex mb-32 lg:my-32" v-observe-visibility="visibilityChanged">
+  ><section id="contact" class="w-full flex mb-32 lg:my-32">
     <div class="text mt-20 flex flex-col w-full">
-      <p class="text-2xl lg:text-6xl light light w-full">
-        Dont be a stranger! <br class="block lg:hidden" />
-        If you got a job opportunity or a cool project idea, drop me a line...
+      <p
+        class="text-2xl lg:text-6xl light light w-full text-animate"
+        v-animate-text
+        v-observe-visibility="animateTextIn"
+      >
+        Dont be a stranger! If you got a job opportunity or a cool project idea, drop me a line...
       </p>
-      <a class="link text-email outlined-text link-reset bold" href="mailto:roman.dan.traian@gmail.com">
-        <span class="bold">Shoot an email</span>
+      <a
+        class="link text-email outlined-text link-reset bold text-animate"
+        v-animate-text
+        v-observe-visibility="animateTextIn"
+        href="mailto:roman.dan.traian@gmail.com"
+      >
+        Shoot an email
       </a>
       <div class="w-full lg:w-1/2 xl:w-1/3 ml-auto mt-32">
         <p class="animate text-base lg:text-xl light">
@@ -23,8 +31,10 @@
 
 <script>
 // import { TimelineLite } from "gsap";
+import { globalMixin } from "../mixins/GlobalMixin";
+
 export default {
-  mixins: [],
+  mixins: [globalMixin],
 
   components: {},
 
@@ -46,19 +56,6 @@ export default {
 
   watch: {},
 
-  methods: {
-    visibilityChanged(isVisible, element) {
-      console.log(isVisible);
-      console.log(element);
-      this.animateIn();
-    },
-    animateIn() {
-      let texts = document.querySelectorAll("#contact .textInitial");
-      console.log(texts);
-      texts.forEach(element => {
-        element.classList.add("textVisible");
-      });
-    },
-  },
+  methods: {},
 };
 </script>
