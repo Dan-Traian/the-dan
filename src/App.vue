@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="m-0 p-0 overflow-x-hidden flex">
-    <div id="pointer"></div>
+    <div id="pointer" class="hidden lg:block"></div>
 
     <scene></scene>
 
