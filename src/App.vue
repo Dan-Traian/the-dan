@@ -3,7 +3,7 @@
     <div id="pointer" class="hidden lg:block"></div>
 
     <div id="darkModeSwitch" class="flex items-center justify-center">
-      <ion-icon name="moon" class="text:2xl lg:text-4xl p-2" @click="switchDarkMode"></ion-icon>
+      <ion-icon name="moon" class="text:2xl lg:text-4xl p-2 hoverable" @click="switchDarkMode"></ion-icon>
     </div>
 
     <img :src="require(`@/assets/img/logo.svg`)" id="circleLogo" alt="" @click="scrollToTop" />
@@ -59,9 +59,7 @@ export default {
     setupScrollLogo() {
       document.addEventListener("scroll", () => {
         let getScrollDistance = window.pageYOffset / 20;
-        console.log(getScrollDistance, "rotate(" + getScrollDistance + "deg)");
         document.getElementById("circleLogo").style.transform = "rotate(" + getScrollDistance + "deg)";
-        console.log(document.getElementById("circleLogo"));
       });
     },
     scrollToTop() {

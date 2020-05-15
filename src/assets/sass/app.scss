@@ -13,6 +13,10 @@
 .link {
   text-decoration: none;
   color: inherit;
+  cursor: none;
+  &:hover {
+    cursor: none;
+  }
   &.standard-link {
     text-decoration: none;
     color: $blue-ribbon;

@@ -9,7 +9,7 @@
         Dont be a stranger! If you got a job opportunity or a cool project idea, drop me a line...
       </p>
       <a
-        class="link text-email outlined-text link-reset bold text-animate"
+        class="link text-email outlined-text link-reset bold text-animate hoverable"
         v-animate-text
         v-observe-visibility="animateTextIn"
         href="mailto:roman.dan.traian@gmail.com"
@@ -22,7 +22,7 @@
           contacts.
         </p>
         <p class="animate text-base lg:text-xl light mt-10 lg:mt-20">
-          You can also find me on <a href="#" class="link-reset bold" target="_blank"> LinkedIn</a>.
+          You can also find me on <a href="#" class="link-reset bold hoverable" target="_blank"> LinkedIn</a>.
         </p>
       </div>
     </div>
