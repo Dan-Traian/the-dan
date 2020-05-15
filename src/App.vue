@@ -2,10 +2,12 @@
   <div id="app" class="m-0 p-0 overflow-x-hidden flex">
     <div id="pointer" class="hidden lg:block"></div>
 
-    <div id="darkModeSwitch">
-      <ion-icon name="contrast-outline" class="text:2xl lg:text-4xl" @click="switchDarkMode"></ion-icon>
+    <div id="darkModeSwitch" class="flex items-center justify-center">
+      <ion-icon name="moon" class="text:2xl lg:text-4xl p-2" @click="switchDarkMode"></ion-icon>
     </div>
+
     <img :src="require(`@/assets/img/logo.svg`)" id="circleLogo" alt="" @click="scrollToTop" />
+
     <scene></scene>
 
     <div class="content w-full md:w-4/5 lg:max-w-7xl xl:max-w-10xl px-10 lg:px-0 mx-auto">
@@ -83,6 +85,9 @@ export default {
   z-index: 1000;
 }
 #darkModeSwitch {
+  filter: invert(100%);
+  background-color: #f3f5f9;
+  border-radius: 100%;
   position: fixed;
   top: 20px;
   right: 20px;
