@@ -1,8 +1,8 @@
 <template>
-  <section id="background" class="w-full min-h-screen flex items-center justify-star">
+  <section id="background" class="w-full flex items-center justify-star">
     <div class="flex w-full">
-      <div class="w-1/2 flex flex-col" id="background_pinned">
-        <p class="text-3xl lg:text-6xl light">
+      <div class="w-1/2 flex flex-col">
+        <p class="text-medium light text-animate" v-animate-text v-observe-visibility="animateTextIn">
           Whats my background?
         </p>
         <div class="w-2/3 text-right" id="yearsNumbers">
@@ -11,15 +11,10 @@
         </div>
       </div>
 
-      <div class="w-1/2 mt-64">
+      <div class="w-1/2">
         <p class="text-base lg:text-xl light mt-4">
-          Currently I am working as a Full stack Developer, working mainly on Laravel and Vue.js at Flyhjaelp Aps. Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit. Integer porta, mauris quis interdum mattis, mauris risus
-          consectetur est, nec sollicitudin elit dolor sit amet diam. Maecenas et odio purus. Aenean leo mi, tempus non
-          mattis a, convallis sed lectus. Donec vel nulla sed urna venenatis congue nec ac mi. Morbi ullamcorper
-          pharetra faucibus. Nunc id pretium enim. Quisque et pellentesque ligula. Aliquam hendrerit, metus id rutrum
-          mattis, sapien dolor dictum mi, a maximus odio lorem a massa. Vestibulum tincidunt massa velit, quis elementum
-          massa commodo in.
+          In 2015, I moved to Denmark to attend a Bachelor in Multimedia Design, finished with a Top Up in Web
+          Development.
         </p>
       </div>
     </div>
@@ -27,8 +22,10 @@
 >
 
 <script>
+import { globalMixin } from "../mixins/GlobalMixin";
+
 export default {
-  mixins: [],
+  mixins: [globalMixin],
 
   components: {},
 

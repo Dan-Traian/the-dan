@@ -1,13 +1,13 @@
 <template>
-  <section id="whatNow" class="w-full min-h-screen flex items-center justify-start">
+  <section id="whatNow" class="w-full flex items-center justify-start">
     <div class="flex w-full">
       <div class="w-1/2 overflow-hidden">
-        <p class="text-3xl lg:text-6xl light" id="whatNow_pinned">
+        <p class="text-medium light text-animate" v-animate-text v-observe-visibility="animateTextIn">
           What am I doing right now?
         </p>
       </div>
 
-      <div class="w-1/2 mt-64" id="whatNowText">
+      <div class="w-1/2">
         <p class="text-base lg:text-xl light mt-4">
           Currently I am working as a Full stack Developer, working mainly on Laravel and Vue.js at Flyhjaelp Aps.
         </p>
@@ -24,8 +24,10 @@
 </template>
 
 <script>
+import { globalMixin } from "../mixins/GlobalMixin";
+
 export default {
-  mixins: [],
+  mixins: [globalMixin],
 
   components: {},
 

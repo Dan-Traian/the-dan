@@ -25,4 +25,19 @@
   width: 100%;
   transition: all 0.3s ease-in-out;
 }
+
+#sideInfo {
+  position: fixed;
+  top: 2vw;
+  left: 2vw;
+  height: 90vh;
+  z-index: 1000;
+  max-width: 8rem;
+
+  .text {
+    transform-origin: center;
+    transform: rotate(-90deg);
+  }
+}
+
 @tailwind utilities;

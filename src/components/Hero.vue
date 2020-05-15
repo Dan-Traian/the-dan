@@ -1,5 +1,5 @@
 <template>
-  <section id="hero" class="w-full flex lg:pt-32 mac:pt-64 ">
+  <section id="hero" class="w-full flex lg:pt-32 mac:pt-48 ">
     <div class="text pt-32 mac:pt-64" id="introText">
       <p class="text-intro light text-animate" v-animate-text v-observe-visibility="animateTextIn">
         Hello! I'm Dan Traian! I have a passion for building highly polished user experiences, and enjoy seeing them

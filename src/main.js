@@ -8,6 +8,8 @@ Vue.directive("animate-text", AnimateText);
 
 Vue.directive("observe-visibility", ObserveVisibility);
 
+Vue.config.ignoredElements = [/^ion-/];
+
 import "@/assets/sass/app.scss";
 import App from "./App.vue";
 

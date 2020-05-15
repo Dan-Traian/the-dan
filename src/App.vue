@@ -2,15 +2,24 @@
   <div id="app" class="m-0 p-0 overflow-x-hidden flex">
     <div id="pointer" class="hidden lg:block"></div>
 
+    <div id="darkModeSwitch">
+      <ion-icon name="contrast-outline" class="text:2xl lg:text-4xl" @click="switchDarkMode"></ion-icon>
+    </div>
+    <img :src="require(`@/assets/img/logo.svg`)" id="circleLogo" alt="" @click="scrollToTop" />
     <scene></scene>
 
     <div class="content w-full md:w-4/5 lg:max-w-7xl xl:max-w-10xl px-10 lg:px-0 mx-auto">
       <hero></hero>
+
+      <div class="spacer w-full py-10 md:py-20 mac:py-64"></div>
+
+      <what-now class="hidden lg:block"></what-now>
+
+      <div class="spacer w-full py-10 md:py-20 mac:py-64"></div>
+
+      <background class="hidden lg:block"></background>
+
       <div class="spacer w-full py-10 md:py-20"></div>
-      <!--      <what-now></what-now>-->
-      <div class="spacer w-full py-10 md:py-20"></div>
-      <!--      <background></background>-->
-      <!--      <div class="spacer w-full py-20"></div>-->
 
       <contact></contact>
     </div>
@@ -41,9 +50,42 @@ export default {
     return {};
   },
   created() {},
-  mounted() {},
-  methods: {},
+  mounted() {
+    this.setupScrollLogo();
+  },
+  methods: {
+    setupScrollLogo() {
+      document.addEventListener("scroll", () => {
+        let getScrollDistance = window.pageYOffset / 20;
+        console.log(getScrollDistance, "rotate(" + getScrollDistance + "deg)");
+        document.getElementById("circleLogo").style.transform = "rotate(" + getScrollDistance + "deg)";
+        console.log(document.getElementById("circleLogo"));
+      });
+    },
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    },
+    switchDarkMode() {
+      document.querySelector("html").classList.toggle("dark-mode");
+    },
+  },
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+#circleLogo {
+  transform: rotate(0deg);
+  position: fixed;
+  top: 20px;
+  height: 5rem;
+  width: 5rem;
+  left: 20px;
+  z-index: 1000;
+}
+#darkModeSwitch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+</style>

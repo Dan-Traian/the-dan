@@ -1,6 +1,5 @@
 let defaultConfig = require("tailwindcss/defaultConfig");
 
-let colors = require("./colors");
 module.exports = {
   prefix: "",
   important: false,
@@ -13,7 +12,6 @@ module.exports = {
       xl: "1280px",
       mac: "1680px",
     },
-    colors: colors,
     spacing: {
       "px": "1px",
       "0": "0",
@@ -46,7 +44,6 @@ module.exports = {
       "outline": "0 0 0 3px rgba(66, 153, 225, 0.5)",
       "none": "none",
     },
-    backgroundColor: theme => theme("colors"),
     backgroundPosition: {
       "bottom": "bottom",
       "center": "center",
@@ -63,26 +60,7 @@ module.exports = {
       cover: "cover",
       contain: "contain",
     },
-    borderColor: theme => ({
-      ...theme("colors"),
-    }),
-    borderRadius: {
-      none: "0",
-      sm: "0.125rem",
-      default: "0.25rem",
-      md: "10px",
-      lg: "0.5rem",
-      xl: "1rem",
-      full: "9999px",
-    },
 
-    borderWidth: {
-      "default": "1px",
-      "0": "0",
-      "2": "2px",
-      "4": "4px",
-      "8": "8px",
-    },
     container: {},
     cursor: {
       "auto": "auto",
@@ -255,7 +233,6 @@ module.exports = {
     stroke: {
       current: "currentColor",
     },
-    textColor: theme => theme("colors"),
   },
   variants: {
     alignContent: ["responsive"],

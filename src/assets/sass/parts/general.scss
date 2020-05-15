@@ -10,6 +10,11 @@ html {
   scroll-behavior: smooth;
   cursor: none;
   overflow-x: hidden;
+  transition: filter 0.6s ease-in-out;
+  filter: invert(0%);
+  &.dark-mode {
+    filter: invert(100%);
+  }
 }
 
 body {
@@ -46,10 +51,10 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-  background: #c2c4c6;
+  background: $cyan;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #3b34f3;
+  background-color: $orange;
   outline: none;
 }
