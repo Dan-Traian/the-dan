@@ -135,11 +135,24 @@ $percent : 0.8;
   flex-wrap: wrap;
   div{
     display: block;
-    margin-right: 10px;
-    @media only screen and (min-width: 1200px) {
-      margin-right: 35px;
+    &.small{
+      margin-right: 5px;
+      @media only screen and (min-width: 1200px) {
+        margin-right: 10px;
+      }
     }
-    //border:1px solid red;
+    &.medium{
+      margin-right: 10px;
+      @media only screen and (min-width: 1200px) {
+        margin-right: 35px;
+      }
+    }
+    &.large{
+      margin-right: 10px;
+      @media only screen and (min-width: 1200px) {
+        margin-right: 35px;
+      }
+    }
     overflow: hidden;
     span{
       display: block;

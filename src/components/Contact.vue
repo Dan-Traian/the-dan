@@ -3,14 +3,14 @@
     <div class="text mt-20 flex flex-col w-full">
       <p
         class="text-2xl lg:text-6xl light light w-full text-animate"
-        v-animate-text
+        v-animate-text="'medium'"
         v-observe-visibility="animateTextIn"
       >
         Dont be a stranger! If you got a job opportunity or a cool project idea, drop me a line...
       </p>
       <a
         class="link text-email outlined-text link-reset bold text-animate hoverable"
-        v-animate-text
+        v-animate-text="'large'"
         v-observe-visibility="animateTextIn"
         href="mailto:roman.dan.traian@gmail.com"
       >

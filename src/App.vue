@@ -13,13 +13,13 @@
     <div class="content w-full md:w-4/5 lg:max-w-7xl xl:max-w-10xl px-10 lg:px-0 mx-auto">
       <hero></hero>
 
-      <div class="spacer w-full py-10 md:py-20 mac:py-64"></div>
+      <div class="spacer w-full py-10 min-h-30"></div>
 
-      <what-now class="hidden lg:block"></what-now>
+      <what-now class="hidden lg:block min-h-80"></what-now>
 
-      <div class="spacer w-full py-10 md:py-20 mac:py-64"></div>
+      <div class="spacer w-full py-10 min-h-30"></div>
 
-      <background class="hidden lg:block"></background>
+      <background class="hidden lg:block min-h-80"></background>
 
       <div class="spacer w-full py-10 md:py-20"></div>
 
