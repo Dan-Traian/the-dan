@@ -107,27 +107,59 @@ $percent : 0.8;
   font-weight: bold;
 }
 
+
+
+
 .outlined-text{
-  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color:#410807;
-  transition: all 1.5s ease-in-out;
+  color: #0000;
+  display: inline-block;
+  position: relative;
+  &:before{
+    color: #0000;
+    transition: color .4s ease;
+    content: attr(data-text);
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+  }
+  &:after{
+    color: #4108071a;
+    -webkit-text-fill-color: #0000;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #410807;
+    content: attr(data-text);
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    box-sizing: inherit;
+  }
   &:hover{
-    -webkit-text-fill-color: #410807; /* Will override color (regardless of order) */
+    &:before{
+      color: #410807;
+
+    }
+    &:after{
+
+    }
   }
 }
 
-
 .number-text {
-  @extend .outlined-text;
   font-size: calc(45vw / 4);
   line-height: 90%;
   margin: 0;
   padding: 0;
-  color: #410807;
-
   font-family: "Montserrat", sans-serif;
   direction: rtl;
+
+}
+
+.text-large{
+  font-size: calc(45vw / 4);
+  line-height: 90%;
+
 }
 
 .text-animate{

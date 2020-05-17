@@ -9,10 +9,9 @@
         Dont be a stranger! If you got a job opportunity or a cool project idea, drop me a line...
       </p>
       <a
-        class="link text-email outlined-text link-reset bold text-animate hoverable"
-        v-animate-text="'large'"
-        v-observe-visibility="animateTextIn"
+        class="text-email outlined-text link-reset bold hoverable"
         href="mailto:roman.dan.traian@gmail.com"
+        data-text=" Shoot an email"
       >
         Shoot an email
       </a>
@@ -30,7 +29,6 @@
 >
 
 <script>
-// import { TimelineLite } from "gsap";
 import { globalMixin } from "../mixins/GlobalMixin";
 
 export default {

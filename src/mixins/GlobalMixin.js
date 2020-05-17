@@ -15,12 +15,11 @@ export const globalMixin = {
         if (isVisible) element.classList.add("active");
         else element.classList.remove("active");
       });
-      this.changeTheme(element.target);
+      // this.changeTheme(element.target);
     },
-    changeTheme(element) {
-      let themeToTransitionTo = element.dataset.theme;
-      let isDarkMode = document.querySelector("body").dataset.darkmode;
-      console.log(themeToTransitionTo, isDarkMode);
-    },
+    // changeTheme(element) {
+    //   let themeToTransitionTo = element.dataset.theme;
+    //   let isDarkMode = document.querySelector("body").dataset.darkmode;
+    // },
   },
 };

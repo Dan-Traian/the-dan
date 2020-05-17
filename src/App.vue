@@ -13,15 +13,11 @@
     <div class="content w-full md:w-4/5 lg:max-w-7xl xl:max-w-10xl px-10 lg:px-0 mx-auto">
       <hero></hero>
 
-      <div class="spacer w-full py-10 min-h-30"></div>
+      <what-now class="hidden lg:block py-20 lg:py-48"></what-now>
 
-      <what-now class="hidden lg:block min-h-80"></what-now>
+      <background class="hidden lg:block py-20 lg:py-48"></background>
 
-      <div class="spacer w-full py-10 min-h-30"></div>
-
-      <background class="hidden lg:block min-h-80"></background>
-
-      <div class="spacer w-full py-10 md:py-20"></div>
+      <competences class="hidden lg:block py-20 lg:py-48"></competences>
 
       <contact></contact>
     </div>
@@ -34,6 +30,7 @@ import Hero from "./components/Hero";
 import WhatNow from "./components/WhatNow";
 import Background from "./components/Background";
 import Contact from "./components/Contact";
+import Competences from "./components/Competences";
 
 export default {
   name: "app",
@@ -46,6 +43,7 @@ export default {
     // eslint-disable-next-line vue/no-unused-components
     background: Background,
     contact: Contact,
+    competences: Competences,
   },
   computed: {},
   data() {
