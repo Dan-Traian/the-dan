@@ -87,6 +87,9 @@ export default {
 </script>
 
 <style lang="scss">
+.content {
+  z-index: 50;
+}
 #circleLogo {
   transform: rotate(0deg);
   position: fixed;

@@ -6,8 +6,8 @@
           Whats my background?
         </p>
         <div class="w-2/3 text-right" id="yearsNumbers">
-          <p class="text-large outlined-text">2015</p>
-          <p class="text-large outlined-text">2020</p>
+          <p class="text-large bold">2015</p>
+          <p class="text-large bold">-20</p>
         </div>
       </div>
 
