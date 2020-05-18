@@ -8,6 +8,22 @@
 
     <img :src="require(`@/assets/img/logo.svg`)" id="circleLogo" alt="" @click="scrollToTop" />
 
+    <div id="logos" class=" flex-col text-base hidden md:flex">
+      <a href="https://github.com/Dan-Traian" target="_blank" class="m-3 text-base lg:text-xl hoverable link-reset">
+        <ion-icon name="logo-github"></ion-icon>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/dan-traian-roman/"
+        target="_blank"
+        class="m-3 text-base lg:text-xl hoverable link-reset"
+      >
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a>
+      <a href="mailto:roman.dan.traian@gmail.com" target="_blank" class="m-3 text-base lg:text-xl hoverable link-reset">
+        <ion-icon name="mail"></ion-icon>
+      </a>
+    </div>
+
     <scene></scene>
 
     <div class="content w-full md:w-4/5 lg:max-w-7xl xl:max-w-10xl px-10 lg:px-0 mx-auto">
@@ -80,6 +96,14 @@ export default {
   left: 20px;
   z-index: 1000;
 }
+
+#logos {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
 #darkModeSwitch {
   filter: invert(100%);
   background-color: #f3f5f9;

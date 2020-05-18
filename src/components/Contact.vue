@@ -9,12 +9,18 @@
         Dont be a stranger! If you got a job opportunity or a cool project idea, drop me a line...
       </p>
       <a
-        class="text-email outlined-text link-reset bold hoverable"
+        class="text-email outlined-text link-reset bold hoverable mt-20"
         href="mailto:roman.dan.traian@gmail.com"
-        data-text=" Shoot an email"
-      >
-        Shoot an email
+        data-text="Shoot an email"
+        >Shoot an email
       </a>
+      <p class="text-2xl lg:text-6xl light light w-full">
+        OR
+      </p>
+      <a class="text-email outlined-text link-reset bold hoverable" href="tel:+45-91840125" data-text="Drop a call">
+        Drop a call
+      </a>
+
       <div class="w-full lg:w-1/2 xl:w-1/3 ml-auto mt-32">
         <p class="animate text-base lg:text-xl light">
           Even if I cant help directly with, I may be able to recommend people from my network of super talented
