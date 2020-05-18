@@ -28,7 +28,7 @@
           v-animate-text="'small'"
           v-observe-visibility="animateTextIn"
         >
-          Due to the Coronavirus situation, I will be out of job starting mid summer - July 2020.
+          Ill be looking for my next adventure from July 2020.
         </p>
       </div>
     </div>

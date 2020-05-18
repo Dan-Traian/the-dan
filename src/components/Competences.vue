@@ -13,15 +13,72 @@
       <div class="w-full mt-20">
         <div class="skill py-20">
           <span class="text-large outlined-text bold hoverable text-center" data-text="JavaScript">JavaScript</span>
+
+          <kinesis-container event="move" class="skill-box">
+            <kinesis-element :strength="50" type="translate">
+              <kinesis-element
+                :strength="4"
+                type="depth_inv"
+                class="child-container w-full flex flex-col px-10 py-20 text-xl bg-red"
+              >
+                <p class="text-base lg:text-xl light">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta, mauris quis interdum mattis,
+                  mauris risus consectetur
+                </p>
+              </kinesis-element>
+            </kinesis-element>
+          </kinesis-container>
         </div>
         <div class="skill py-20">
           <span class="text-large outlined-text bold hoverable text-center" data-text="CSS/SASS">CSS/SASS</span>
+          <kinesis-container event="move" class="skill-box">
+            <kinesis-element :strength="50" type="translate">
+              <kinesis-element
+                :strength="4"
+                type="depth_inv"
+                class="child-container w-full flex flex-col px-10 py-20 text-xl bg-red"
+              >
+                <p class="text-base lg:text-xl light">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta, mauris quis interdum mattis,
+                  mauris risus consectetur
+                </p>
+              </kinesis-element>
+            </kinesis-element>
+          </kinesis-container>
         </div>
         <div class="skill py-20">
           <span class="text-large outlined-text bold hoverable text-center" data-text="DESIGN">DESIGN</span>
+          <kinesis-container event="move" class="skill-box">
+            <kinesis-element :strength="50" type="translate">
+              <kinesis-element
+                :strength="4"
+                type="depth_inv"
+                class="child-container w-full flex flex-col px-10 py-20 text-xl bg-red"
+              >
+                <p class="text-base lg:text-xl light ">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta, mauris quis interdum mattis,
+                  mauris risus consectetur
+                </p>
+              </kinesis-element>
+            </kinesis-element>
+          </kinesis-container>
         </div>
         <div class="skill py-20">
           <span class="text-large outlined-text bold hoverable text-center" data-text="LARAVEL">LARAVEL</span>
+          <kinesis-container event="move" class="skill-box">
+            <kinesis-element :strength="50" type="translate">
+              <kinesis-element
+                :strength="4"
+                type="depth_inv"
+                class="child-container w-full flex flex-col px-10 py-20 text-xl bg-red"
+              >
+                <p class="text-base lg:text-xl light ">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porta, mauris quis interdum mattis,
+                  mauris risus consectetur
+                </p>
+              </kinesis-element>
+            </kinesis-element>
+          </kinesis-container>
         </div>
       </div>
     </div>
@@ -29,12 +86,16 @@
 </template>
 
 <script>
+import { KinesisContainer, KinesisElement } from "vue-kinesis";
 import { globalMixin } from "../mixins/GlobalMixin";
 
 export default {
   mixins: [globalMixin],
 
-  components: {},
+  components: {
+    kinesisContainer: KinesisContainer,
+    kinesisElement: KinesisElement,
+  },
 
   directives: {},
 
@@ -61,6 +122,7 @@ export default {
 .skill {
   display: inline-block;
   position: relative;
+  width: 100%;
   &:before,
   &:after {
     content: "";
@@ -75,6 +137,25 @@ export default {
 
   &:after {
     top: 100%;
+  }
+  &:hover {
+    .skill-box {
+      display: block;
+      opacity: 1;
+    }
+  }
+  .skill-box {
+    display: none;
+    position: absolute;
+    width: 70%;
+    top: 30%;
+    left: 20%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    z-index: 600;
+    .child-container {
+      background-color: #98f5fd;
+    }
   }
 }
 </style>
