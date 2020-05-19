@@ -87,7 +87,7 @@ export default {
       document.addEventListener("mousemove", event => {
         this.pointer.style.left = event.pageX - document.body.scrollLeft + "px";
         this.pointer.style.top = event.pageY - document.body.scrollTop + "px";
-        // this.addShape(event);
+        this.addShape(event);
       });
       document.addEventListener("mousedown", () => {
         this.pointer.classList.add("clicked");
