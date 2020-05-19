@@ -1,15 +1,13 @@
 <template>
   <skill skill-name="Laravel">
-    <div class="flex w-full items-center">
-      <img :src="require(`@/assets/img/logos/css/tailwind.png`)" class="skill-logo" alt="" />
-      <p class="text-3xl bold">
-        Title skills
-      </p>
-    </div>
-    <div class="w-full mt-10">
-      <p class="text-2xl light mt-5">
-        Been writing CSS ever since I first got introduced to making websites (9 years now ).
-      </p>
+    <div class="w-full flex flex-wrap world-cloud">
+      <p class="word mr-16">Laravel</p>
+      <p class="word mr-16">Blade</p>
+      <p class="word mr-16">Tailwind</p>
+      <p class="word mr-16">Package making</p>
+      <p class="word mr-16">Observable patterns</p>
+      <p class="word mr-16">Controller oriented</p>
+      <p class="word mr-16">Forge</p>
     </div>
   </skill>
 </template>

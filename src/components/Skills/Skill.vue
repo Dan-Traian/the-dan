@@ -8,9 +8,9 @@
         <kinesis-element
           :strength="4"
           type="depth_inv"
-          class="child-container w-full flex flex-col py-10 pl-10 pr-20 text-xl"
+          class="child-container w-full flex flex-col p-10 mac:p-20 text-xl"
         >
-          <div class="content">
+          <div class="content ">
             <slot></slot>
           </div>
           <span class="text-large bold overlay-text">
@@ -96,7 +96,7 @@ export default {
     opacity: 0;
     transition: opacity 0.4s ease-in-out;
     z-index: 600;
-    transform: translate(0, -30%);
+    transform: translate(0, -25%);
     .child-container {
       background-color: #fff;
       position: relative;
@@ -120,10 +120,16 @@ export default {
 .skill-logo {
   display: block;
   width: auto;
-  height: 50px;
+  height: 80px;
   margin-right: 20px;
+  margin-bottom: 20px;
   @media only screen and (min-width: 1680px) {
     height: 100px;
   }
+}
+.word {
+  padding: 15px;
+  font-size: 50px;
+  font-weight: bold;
 }
 </style>

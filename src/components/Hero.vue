@@ -13,7 +13,6 @@
     </div>
   </section>
 </template>
-<div><span></span></div>
 <script>
 import { globalMixin } from "../mixins/GlobalMixin";
 export default {

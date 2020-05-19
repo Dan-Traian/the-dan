@@ -19,22 +19,43 @@ export default {
     return {
       scene: null,
       pointer: null,
-      nrOfCurrentCircles: 0,
-      maxNrOfCirclesAllowed: 1,
+      currentNrOfShapes: 0,
+      maxNrOfShapes: 1,
       isResetting: false,
-      colorsVariations: {
-        pink: "cyan",
-        cyan: "yellow",
-        yellow: "cyan2",
-        cyan2: "orange",
-        orange: "pink",
-      },
-      currentThemeIndex: "",
+      currentThemeIndex: -1,
+
+      themes: [
+        {
+          bodyColor: "pink",
+          shapeColor: "cyan",
+          shape: "triangle",
+        },
+        {
+          bodyColor: "cyan",
+          shapeColor: "yellow",
+          shape: "circle",
+        },
+        {
+          bodyColor: "yellow",
+          shapeColor: "cyan",
+          shape: "circle",
+        },
+        {
+          bodyColor: "cyan",
+          shapeColor: "orange",
+          shape: "circle",
+        },
+        {
+          bodyColor: "orange",
+          shapeColor: "pink",
+          shape: "circle",
+        },
+      ],
     };
   },
 
   created() {
-    this.maxNrOfCirclesAllowed = this.isMobile() ? 1 : 300;
+    this.maxNrOfShapes = this.isMobile() ? 1 : 300;
   },
 
   mounted() {
@@ -66,7 +87,7 @@ export default {
       document.addEventListener("mousemove", event => {
         this.pointer.style.left = event.pageX - document.body.scrollLeft + "px";
         this.pointer.style.top = event.pageY - document.body.scrollTop + "px";
-        this.addCircle(event);
+        // this.addShape(event);
       });
       document.addEventListener("mousedown", () => {
         this.pointer.classList.add("clicked");
@@ -77,31 +98,32 @@ export default {
       return true;
     },
 
-    addCircle(mouseEvent) {
-      if (this.nrOfCurrentCircles < this.maxNrOfCirclesAllowed) {
+    addShape(mouseEvent) {
+      if (this.currentNrOfShapes < this.maxNrOfShapes) {
         let newDiv = document.createElement("div");
-        newDiv.classList.add("circle");
-        newDiv.classList.add(this.colorsVariations[this.currentThemeIndex]);
+        newDiv.classList.add("shape");
+        newDiv.classList.add(this.themes[this.currentThemeIndex].shape);
+        newDiv.classList.add(this.themes[this.currentThemeIndex].shapeColor);
         newDiv.style.left = mouseEvent.clientX + "px";
         newDiv.style.top = mouseEvent.clientY + "px";
         this.scene.appendChild(newDiv);
 
-        this.nrOfCurrentCircles++;
-      } else if (this.nrOfCurrentCircles === this.maxNrOfCirclesAllowed && !this.isResetting) {
+        this.currentNrOfShapes++;
+      } else if (this.currentNrOfShapes === this.maxNrOfShapes && !this.isResetting) {
         this.resetScene();
       }
     },
     updateNextColorTheme() {
       this.scene.classList = "";
-      this.currentThemeIndex = this.currentThemeIndex === "" ? "pink" : this.colorsVariations[this.currentThemeIndex];
-
-      this.scene.classList.add("bg-" + this.currentThemeIndex);
+      this.currentThemeIndex++;
+      if (this.currentThemeIndex === this.themes.length) this.currentThemeIndex = 0;
+      this.scene.classList.add("bg-" + this.themes[this.currentThemeIndex].bodyColor);
     },
 
     resetScene() {
       this.isResetting = true;
-      let circles = this.scene.querySelectorAll(".circle");
-      circles[circles.length - 1].classList.add("maximised");
+      let shapes = this.scene.querySelectorAll(".shape");
+      shapes[shapes.length - 1].classList.add("maximised");
 
       setTimeout(() => {
         this.updateNextColorTheme();
@@ -110,7 +132,7 @@ export default {
         this.scene.innerHTML = "";
       }, 2400);
       setTimeout(() => {
-        this.nrOfCurrentCircles = 0;
+        this.currentNrOfShapes = 0;
         this.isResetting = false;
       }, 2400);
     },
@@ -127,12 +149,18 @@ export default {
   height: 100vh;
   overflow: hidden;
   z-index: 10;
-  .circle {
+  .shape {
     position: absolute;
     border-radius: 100%;
     transform: translate(-50%, -50%);
     transition: width 1s ease-in-out, height 1s ease-in-out;
 
+    width: 40vw;
+    height: 40vw;
+    @media only screen and (min-width: 1680px) {
+      width: 15vw;
+      height: 15vw;
+    }
     &.cyan,
     &.cyan2 {
       animation: bgChangeCyan 0.5s ease-in-out forwards;

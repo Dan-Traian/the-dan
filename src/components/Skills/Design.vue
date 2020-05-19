@@ -1,15 +1,11 @@
 <template>
   <skill skill-name="Design">
-    <div class="flex w-full items-center">
-      <img :src="require(`@/assets/img/logos/css/tailwind.png`)" class="skill-logo" alt="" />
-      <p class="text-3xl bold">
-        Title skills
-      </p>
-    </div>
-    <div class="w-full mt-10">
-      <p class="text-base mac:text-2xl light mt-5">
-        Been writing CSS ever since I first got introduced to making websites (9 years now ).
-      </p>
+    <div class="w-full flex flex-wrap world-cloud">
+      <p class="word mr-16">Prototyping</p>
+      <p class="word mr-16">User testing</p>
+      <p class="word mr-16">User research</p>
+      <p class="word mr-16">Printable materials</p>
+      <p class="word mr-16">Social media content</p>
     </div>
   </skill>
 </template>

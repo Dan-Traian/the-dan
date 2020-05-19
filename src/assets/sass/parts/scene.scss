@@ -51,17 +51,6 @@
   }
 }
 
-#scene {
-  .circle {
-    width: 40vw;
-    height: 40vw;
-    @include respond-to(wide) {
-      width: 15vw;
-      height: 15vw;
-    }
-  }
-}
-
 .bg-cyan,
 .bg-cyan2 {
   background-color: $cyan;
