@@ -27,7 +27,10 @@
           contacts.
         </p>
         <p class="animate text-base lg:text-xl light mt-10 lg:mt-20">
-          You can also find me on <a href="#" class="link-reset bold hoverable" target="_blank"> LinkedIn</a>.
+          You can also find me on
+          <a href="https://www.linkedin.com/in/dan-traian-roman/" class="link-reset bold hoverable" target="_blank">
+            LinkedIn</a
+          >.
         </p>
       </div>
     </div>
