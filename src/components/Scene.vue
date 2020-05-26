@@ -83,10 +83,7 @@ export default {
           this.pointer.classList.remove("hovering");
         });
       });
-
       document.addEventListener("mousemove", event => {
-        this.pointer.style.left = event.pageX - document.body.scrollLeft + "px";
-        this.pointer.style.top = event.pageY - document.body.scrollTop + "px";
         this.addShape(event);
       });
       document.addEventListener("mousedown", () => {
