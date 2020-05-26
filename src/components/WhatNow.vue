@@ -28,7 +28,7 @@
           v-animate-text="'small'"
           v-observe-visibility="animateTextIn"
         >
-          Ill be looking for my next adventure from July 2020.
+          I'll be looking for my next adventure from June 2020.
         </p>
       </div>
     </div>

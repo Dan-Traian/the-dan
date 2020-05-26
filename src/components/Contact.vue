@@ -9,6 +9,7 @@
         Dont be a stranger! If you got a job opportunity or a cool project idea, drop me a line...
       </p>
       <a
+        id="contactSection"
         class="text-email outlined-text link-reset bold hoverable mt-20"
         href="mailto:roman.dan.traian@gmail.com"
         data-text="Shoot an email"

@@ -2,7 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
 
-@import "space-grotesk";
+@import "fonts/space-grotesk";
+@import "fonts/miso";
 
 
 $min_width: 320px;
@@ -12,6 +13,12 @@ $max_font: 24px;
 
 html{
   //font-family: "Space Grotesk", Helvetica, serif;
+  &.trafficLab{
+    body,
+    * {
+      font-family: "Miso", sans-serif !important;
+    }
+  }
 }
 
 
@@ -26,6 +33,7 @@ body,
   font-weight: normal;
   font-stretch: normal;
   color: #410807;
+
 
 }
 

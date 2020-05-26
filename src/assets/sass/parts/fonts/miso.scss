@@ -1,0 +1,25 @@
+/** Miso **/
+
+@font-face {
+  font-family: "Miso";
+  src: url("~@/assets/fonts/Miso/miso-light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Miso";
+  src: url("~@/assets/fonts/Miso/miso.otf") format("opentype");
+  font-weight: 400; /*Equivalent of 700. */
+  font-style: italic;
+}
+@font-face {
+  font-family: "Miso";
+  src: url("~@/assets/fonts/Miso/miso-bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+.miso {
+  font-family: "Miso", sans-serif !important;
+}
