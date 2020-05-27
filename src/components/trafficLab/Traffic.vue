@@ -8,6 +8,11 @@
     <div class="hidden lg:block w-full h-10"></div>
     <contact></contact>
     <div class="w-full h-10"></div>
+
+    <div class="w-full text-sm text-center py-2 hidden lg:block">
+      Illustrations from
+      <a href="https://www.opendoodles.com/" target="_blank" class="link link-reset miso bold">Open Doodle</a>
+    </div>
   </div>
 </template>
 
@@ -17,6 +22,7 @@ import Hero from "./Hero";
 import Background from "./Background";
 import Now from "./Now";
 import Contact from "./Contact";
+
 export default {
   mixins: [],
 
@@ -66,9 +72,12 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   font-family: "Miso", sans-serif;
+  @media screen and (min-width: 1920px) {
+    font-size: 27px;
+  }
 }
 .box {
   width: var(--boxunit);
@@ -76,9 +85,12 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 60px;
+  font-size: 40px;
   font-family: "Miso", sans-serif;
   font-weight: bold;
+  @media screen and (min-width: 1920px) {
+    font-size: 50px;
+  }
 }
 .box-wide {
   width: calc(var(--boxunit) * 2);
@@ -102,5 +114,17 @@ export default {
 .box-dark {
   background-color: #222222;
   color: #fff !important;
+}
+
+.box-animate {
+  position: relative;
+  opacity: 0;
+  top: 30px;
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0.1s;
+  &.active {
+    opacity: 1;
+    top: 0;
+  }
 }
 </style>

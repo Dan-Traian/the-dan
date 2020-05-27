@@ -17,6 +17,18 @@ export const globalMixin = {
       });
       // this.changeTheme(element.target);
     },
+    animateImageIn(isVisible, element) {
+      let image = element.target;
+      if (isVisible) image.classList.add("active");
+      else image.classList.remove("active");
+      // this.changeTheme(element.target);
+    },
+    animateBoxIn(isVisible, element) {
+      let image = element.target;
+      if (isVisible) image.classList.add("active");
+      else image.classList.remove("active");
+      // this.changeTheme(element.target);
+    },
     // changeTheme(element) {
     //   let themeToTransitionTo = element.dataset.theme;
     //   let isDarkMode = document.querySelector("body").dataset.darkmode;

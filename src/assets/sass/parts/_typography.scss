@@ -32,9 +32,6 @@ body,
   font-variant-east-asian: normal;
   font-weight: normal;
   font-stretch: normal;
-  color: #410807;
-
-
 }
 
 // types
@@ -170,6 +167,18 @@ $percent : 0.8;
 
 }
 
+.image-animate {
+  position: relative;
+  opacity: 0;
+  top: 10px;
+  transition: all 0.5s ease-in-out;
+  transition-delay: 0.2s;
+  &.active {
+    opacity: 1;
+    top: 0;
+  }
+}
+
 .text-animate{
   display: flex;
   flex-wrap: wrap;
@@ -180,6 +189,15 @@ $percent : 0.8;
       @media only screen and (min-width: 1200px) {
         margin-right: 10px;
       }
+    }
+    &.small-miso{
+      margin-right: 3px;
+      @media only screen and (min-width: 1200px) {
+        margin-right: 7px;
+      }
+      font-family: 'Miso', sans-serif;
+      font-weight: bold;
+      color: inherit;
     }
     &.medium{
       margin-right: 10px;

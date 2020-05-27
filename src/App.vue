@@ -157,4 +157,9 @@ export default {
   z-index: 1000;
   border: 1px solid #410807;
 }
+.website {
+  * {
+    color: #410807;
+  }
+}
 </style>
