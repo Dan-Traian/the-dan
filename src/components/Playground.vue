@@ -95,25 +95,4 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-<!--body {-->
-<!--  background-color: #222;-->
-<!--}-->
-<!--.box {-->
-<!--  overflow: hidden;-->
-<!--  transform: rotate(45deg);-->
-<!--  transform-origin: center;-->
-<!--}-->
-<!--#lineContainer,-->
-<!--#lineContainer2 {-->
-<!--  transform: scale(1.5, 1.5) rotate(-45deg);-->
-<!--  transform-origin: center;-->
-<!--  width: 150%;-->
-<!--  .line {-->
-<!--    width: 150%;-->
-<!--    height: 1px;-->
-<!--    background: #fff;-->
-<!--    margin-bottom: 10px;-->
-<!--  }-->
-<!--}-->
-</style>
+<style lang="scss"></style>
