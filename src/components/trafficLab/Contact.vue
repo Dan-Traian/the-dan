@@ -1,12 +1,10 @@
 <template>
   <section id="contactSection" class="w-full flex flex-col items-center">
-    <p class="text-medium text-center miso bold lg:mx-20 mt-10">
+    <p class="text-medium text-center bold lg:mx-20 mt-10">
       Dont be a stranger! If you got a job opportunity or a cool project idea, drop me a line...
     </p>
 
-    <a
-      href="mailto:roman.dan.traian@gmail.com"
-      class="link-reset hoverable text-email text-center miso bold mt-10 lg:mt-20"
+    <a href="mailto:roman.dan.traian@gmail.com" class="link-reset hoverable text-email text-center bold mt-10 lg:mt-20"
       >Shoot an email</a
     >
 

@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+.content-sized {
+  @apply .w-full .px-10 .mx-auto;
+
+  @screen md {
+    @apply .w-4/5;
+  }
+  @screen lg {
+    @apply .max-w-7xl .px-0;
+  }
+  @screen xl {
+    @apply .max-w-10xl;
+  }
+}
+.border-test {
+  border: 1px solid red;
+}
+
+.content {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}

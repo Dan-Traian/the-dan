@@ -5,7 +5,7 @@
         <img :src="require(`@/assets/img/trafficlab/skills.svg`)" alt="" class="w-full h-auto" />
       </div>
       <div class="box box-yellow  flex items-center justify-center box-animate" v-observe-visibility="animateBoxIn">
-        <p class="text-5xl miso bold text-dark  text-center   ">Skills I <br />danz with</p>
+        <p class="text-5xl bold text-dark  text-center   ">Skills I <br />danz with</p>
       </div>
     </div>
     <div class="row w-full flex justify-center">

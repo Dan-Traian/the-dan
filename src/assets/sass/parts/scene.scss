@@ -6,33 +6,6 @@
     background-color: transparent;
   }
 }
-#pointer2 {
-  position: absolute;
-  background-color: $rhino;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
-  transform: translate(-50%, -50%);
-  z-index: 800;
-  border: 1px solid transparent;
-  transition: border-color 0.1s ease-in, width 0.1s ease-in, height 0.1s ease-in, background-color 0.1s ease-in-out;
-  pointer-events: none;
-  mix-blend-mode: difference;
-
-  &.hovering {
-    border: 1px solid transparentize($orange, 0.5);
-    width: 30px;
-    height: 30px;
-    background-color: transparentize($orange, 0.5);
-    z-index: 1001;
-  }
-  &.clicked {
-    border: 1px solid $rhino;
-    width: 40px;
-    height: 40px;
-    background-color: transparent;
-  }
-}
 #pointer {
   position: absolute;
   border-radius: 100%;
@@ -51,8 +24,7 @@
   }
 }
 
-.bg-cyan,
-.bg-cyan2 {
+.bg-cyan {
   background-color: $cyan;
 }
 .bg-yellow {

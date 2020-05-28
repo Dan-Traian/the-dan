@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { globalMixin } from "../mixins/GlobalMixin";
+import { globalMixin } from "../../mixins/GlobalMixin";
 import JavaScript from "./Skills/JavaScript";
 import Css from "./Skills/Css";
 import Design from "./Skills/Design";

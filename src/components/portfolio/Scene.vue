@@ -3,7 +3,8 @@
 </template>
 
 <script>
-import { globalMixin } from "../mixins/GlobalMixin";
+import { globalMixin } from "../../mixins/GlobalMixin";
+
 export default {
   mixins: [globalMixin],
 
@@ -158,8 +159,7 @@ export default {
       width: 15vw;
       height: 15vw;
     }
-    &.cyan,
-    &.cyan2 {
+    &.cyan {
       animation: bgChangeCyan 0.5s ease-in-out forwards;
     }
     &.yellow {

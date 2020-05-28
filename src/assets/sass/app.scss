@@ -1,14 +1,14 @@
 @tailwind base;
 
-@import "parts/mixins";
 @import "parts/variables/_colors";
-@import "parts/_typography";
-@import "parts/general";
 
-// custom scss
+@import "parts/abstract/general";
+@import "parts/abstract/layout";
+@import "parts/abstract/transitions";
+@import "parts/abstract/mixins";
+
+@import "parts/_typography";
 @import "parts/scene";
-@import "parts/loader";
-@import "parts/triggers";
 
 .link {
   text-decoration: none;
@@ -23,11 +23,6 @@
     position: relative;
     display: inline-block;
   }
-}
-
-.content {
-  width: 100%;
-  transition: all 0.3s ease-in-out;
 }
 
 #sideInfo {

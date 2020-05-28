@@ -14,7 +14,7 @@
   </section>
 </template>
 <script>
-import { globalMixin } from "../mixins/GlobalMixin";
+import { globalMixin } from "../../mixins/GlobalMixin";
 export default {
   mixins: [globalMixin],
 

@@ -8,23 +8,23 @@
     </div>
     <div class="row w-full flex justify-center">
       <div class="box-wide box-dark p-10">
-        <p class="text-4xl miso bold text-white">What am I doing right now?</p>
+        <p class="text-4xl bold text-white">What am I doing right now?</p>
         <p
-          class="text-2xl miso bold text-white mt-6 text-animate"
+          class="text-2xl bold text-white mt-6 text-animate"
           v-animate-text="'small-miso'"
           v-observe-visibility="animateTextIn"
         >
           Currently I am working as a Full stack Developer, working mainly on Laravel and Vue.js at Flyhjaelp Aps.
         </p>
         <p
-          class="text-2xl miso bold text-white mt-6 text-animate"
+          class="text-2xl bold text-white mt-6 text-animate"
           v-animate-text="'small-miso'"
           v-observe-visibility="animateTextIn"
         >
           I am also an aspiring UX / UI designer 🔥
         </p>
         <p
-          class="text-2xl miso bold text-white mt-6 text-animate"
+          class="text-2xl bold text-white mt-6 text-animate"
           v-animate-text="'small-miso'"
           v-observe-visibility="animateTextIn"
         >

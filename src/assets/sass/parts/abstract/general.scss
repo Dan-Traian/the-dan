@@ -1,21 +1,10 @@
-* {
-  box-sizing: border-box;
-}
 html {
   box-sizing: border-box;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   color: $black;
   scroll-behavior: smooth;
-  cursor: none;
   overflow-x: hidden;
-  transition: filter 0.6s ease-in-out;
-  filter: invert(0%);
-  &.dark-mode {
-    //:not(img) {
-    //  filter: invert(100%);
-    //}
-  }
 }
 
 body {
@@ -24,13 +13,8 @@ body {
   -moz-animation: fadeIn ease 4s;
   -o-animation: fadeIn ease 4s;
   -ms-animation: fadeIn ease 4s;
-
   margin: 0;
   transition: background-color 0.3s ease-in-out;
-}
-
-.border-test {
-  border: 1px solid red;
 }
 
 .pointer {
