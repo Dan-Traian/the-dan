@@ -26,7 +26,7 @@
 
     <scene></scene>
 
-    <div class="content-sized z-50 border-test">
+    <div class="content-sized z-50">
       <hero></hero>
 
       <what-now class="hidden lg:block py-20 lg:py-48"></what-now>
