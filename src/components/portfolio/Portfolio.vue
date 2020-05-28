@@ -120,15 +120,6 @@ export default {
   z-index: 1000;
 }
 
-#darkModeSwitch {
-  filter: invert(100%);
-  background-color: #f3f5f9;
-  border-radius: 100%;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-}
 #contactMeButton {
   border-radius: 300px;
   padding: 10px 50px;
