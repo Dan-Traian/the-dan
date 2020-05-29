@@ -5,12 +5,14 @@ Vue.use(VueRouter);
 
 import Traffic from "../components/trafficLab/Traffic";
 import Portfolio from "../components/portfolio/Portfolio";
+import Dixa from "../components/dixa/Dixa";
 import Playground from "../components/Playground";
 
 const routes = [
   { path: "*", component: Portfolio },
   { path: "/", component: Portfolio },
   { path: "/traffic-lab", component: Traffic },
+  { path: "/dixa", component: Dixa },
   { path: "/playground", component: Playground },
 ];
 
