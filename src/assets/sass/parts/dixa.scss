@@ -1,0 +1,70 @@
+$dixa-light: #f0f0ff;
+$dixa-dark: #333333;
+$dixa-accent-light: #5644d8;
+$dixa-accent: #2e1da5;
+
+#dixaContainer {
+  background-color: #fff;
+  border: 1px solid #ededed;
+  border-radius: 10px;
+}
+#profile {
+  border-bottom: 1px solid #ededed;
+}
+#chatContainer {
+  *::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparentize($dixa-light, 0.98);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: lighten($dixa-accent-light, 30%);
+    outline: none;
+  }
+}
+
+.actionTag {
+  padding: 10px 20px;
+  border-radius: 45px;
+  background-color: $dixa-accent-light;
+  color: #fff;
+  font-weight: 500;
+  font-size: 12px;
+  margin-right: 7px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.dixa-input {
+  height: 48px;
+  background-color: $dixa-light;
+  border-radius: 10px;
+  border: none;
+  padding: 20px;
+  font-size: 16px;
+  color: $dixa-accent;
+  &::placeholder {
+    color: lighten($dixa-accent-light, 30%);
+  }
+  &:active,
+  &:focus,
+  &:visited {
+    outline: none;
+  }
+}
+
+.submitBtn {
+  border-radius: 10px;
+  background-color: $dixa-accent;
+  color: #fff;
+  outline: none;
+  &:active {
+    outline: none;
+  }
+}
