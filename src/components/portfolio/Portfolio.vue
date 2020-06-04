@@ -1,26 +1,21 @@
 <template>
   <div class="w-screen m-0 p-0 overflow-x-hidden flex grotesk">
     <div id="pointer" class="hidden lg:block"></div>
+    <a href="#contactSection" id="logoContainer">
+      <img :src="require(`@/assets/img/hireme_circle.svg`)" id="circleLogo" alt="" />
 
-    <div id="contactMeButton" class="hidden lg:block">
-      <a class="text-email-button" href="#contactSection">Contact me </a>
-    </div>
-
-    <img :src="require(`@/assets/img/logo.svg`)" id="circleLogo" alt="" @click="scrollToTop" />
+      <img :src="require(`@/assets/img/hireme.svg`)" id="hand" alt="" />
+    </a>
 
     <div id="logos" class=" flex-col text-base hidden md:flex">
-      <a href="https://github.com/Dan-Traian" target="_blank" class="m-3 text-base lg:text-xl hoverable link-reset">
-        <ion-icon name="logo-github"></ion-icon>
-      </a>
       <a
-        href="https://www.linkedin.com/in/dan-traian-roman/"
+        :href="url"
+        :key="icon"
+        v-for="(url, icon) in icons"
         target="_blank"
         class="m-3 text-base lg:text-xl hoverable link-reset"
       >
-        <ion-icon name="logo-linkedin"></ion-icon>
-      </a>
-      <a href="mailto:roman.dan.traian@gmail.com" target="_blank" class="m-3 text-base lg:text-xl hoverable link-reset">
-        <ion-icon name="mail"></ion-icon>
+        <ion-icon :name="icon"></ion-icon>
       </a>
     </div>
 
@@ -61,6 +56,12 @@ export default {
   data() {
     return {
       pointer: null,
+      icons: {
+        "logo-instagram": "https://www.instagram.com/daysofcss/",
+        "logo-github": "https://github.com/Dan-Traian",
+        "logo-linkedin": "https://www.linkedin.com/in/dan-traian-roman/",
+        "mail": "mailto:roman.dan.traian@gmail.com",
+      },
     };
   },
   created() {
@@ -78,12 +79,11 @@ export default {
     setupScrollLogo() {
       document.addEventListener("scroll", () => {
         let getScrollDistance = window.pageYOffset / 20;
-        document.getElementById("circleLogo").style.transform = "rotate(" + getScrollDistance + "deg)";
+        document.getElementById("circleLogo").style.transform =
+          "rotate(" + getScrollDistance + "deg)";
       });
     },
-    scrollToTop() {
-      window.scrollTo(0, 0);
-    },
+
     tempCheckForTraffic() {
       let queryDict = {};
       location.search
@@ -103,14 +103,28 @@ export default {
 </script>
 
 <style lang="scss">
-#circleLogo {
-  transform: rotate(0deg);
+#logoContainer {
   position: fixed;
   top: 20px;
-  height: 5rem;
-  width: 5rem;
-  left: 20px;
+  right: 20px;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 1000;
+  #circleLogo {
+    transform: rotate(0deg);
+    position: fixed;
+    height: 5rem;
+    width: 5rem;
+    z-index: 1000;
+  }
+  #hand {
+    position: fixed;
+    height: 2rem;
+    z-index: 1001;
+  }
 }
 
 #logos {
@@ -118,18 +132,6 @@ export default {
   bottom: 20px;
   left: 20px;
   z-index: 1000;
-}
-
-#contactMeButton {
-  border-radius: 300px;
-  padding: 10px 50px;
-  font-size: 30px;
-  position: fixed;
-  font-weight: bold;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-  border: 1px solid #410807;
 }
 .website {
   * {
