@@ -13,7 +13,21 @@ export default {
   data() {
     return {};
   },
-  created() {},
+  created() {
+    console.log(
+      "%c%s",
+      "color: #EEBECE; background: ; font-size: 24px; padding: 20px 30px",
+      "Hey, do you have questions? run `getEmail()`",
+    );
+
+    window.getEmail = function() {
+      console.log(
+        "%c%s",
+        "color: #37cfb1; background: #2643f7; font-size: 24px; padding: 20px 30px",
+        "You welcome ;) roman.dan.traian@gmail.com",
+      );
+    };
+  },
   mounted() {},
   methods: {},
 };
