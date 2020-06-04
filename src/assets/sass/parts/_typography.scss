@@ -56,14 +56,15 @@ body,
   vertical-align: top;
   font-size: 30px;
   line-height: 1.5;
-  @include fluid-type(400px, 1200px, 30px, 90px);
+  @include fluid-type(400px, 1200px, 30px, 70px);
+
   @media only screen and (min-width: 1200px) {
-    @include fluid-type(1200px,1680px, 90px, 110px);
+    @include fluid-type(1200px,1680px, 70px, 90px);
     line-height: 1.2;
     letter-spacing: 2px;
   }
   @media only screen and (min-width: 1680px) {
-    font-size: 155px;
+    font-size: 110px;
     line-height: 1.2;
     letter-spacing: 2px;
   }
@@ -165,7 +166,7 @@ $percent : 0.8;
 }
 
 .text-large{
-  font-size: calc(45vw / 4);
+  font-size: calc(45vw / 5);
   line-height: 90%;
 }
 

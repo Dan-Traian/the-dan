@@ -8,7 +8,7 @@
         <kinesis-element
           :strength="4"
           type="depth_inv"
-          class="child-container w-full flex flex-col p-10 mac:p-20 text-xl"
+          class="child-container w-full flex flex-col p-10 mac:p-16 text-xl"
         >
           <div class="content ">
             <slot></slot>
@@ -129,7 +129,7 @@ export default {
 }
 .word {
   padding: 15px;
-  font-size: 50px;
+  font-size: 30px;
   font-weight: bold;
 }
 </style>

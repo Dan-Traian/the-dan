@@ -139,6 +139,14 @@ export default {
 </script>
 
 <style lang="scss">
+:root {
+  --boxunit: 20vw;
+}
+@media screen and (min-width: 1200px) {
+  :root {
+    --boxunit: 15vw;
+  }
+}
 #scene {
   position: fixed;
   top: 0;
@@ -153,12 +161,8 @@ export default {
     transform: translate(-50%, -50%);
     transition: width 1s ease-in-out, height 1s ease-in-out;
 
-    width: 40vw;
-    height: 40vw;
-    @media only screen and (min-width: 1680px) {
-      width: 15vw;
-      height: 15vw;
-    }
+    width: var(--boxunit);
+    height: var(--boxunit);
     &.cyan {
       animation: bgChangeCyan 0.5s ease-in-out forwards;
     }
