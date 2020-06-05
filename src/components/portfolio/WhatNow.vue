@@ -2,7 +2,11 @@
   <section id="whatNow" class="w-full flex items-center justify-start">
     <div class="flex w-full">
       <div class="w-1/2 overflow-hidden">
-        <p class="text-medium light text-animate" v-animate-text="'large'" v-observe-visibility="animateTextIn">
+        <p
+          class="text-medium light text-animate"
+          v-animate-text="'large'"
+          v-observe-visibility="animateTextIn"
+        >
           What am I doing right now?
         </p>
       </div>
@@ -13,7 +17,8 @@
           v-animate-text="'small'"
           v-observe-visibility="animateTextIn"
         >
-          Currently I am working as a Full stack Developer, working mainly on Laravel and Vue.js at Flyhjaelp Aps.
+          Currently I am working as a Full stack Developer, working mainly on Laravel and
+          Vue.js at Flyhjaelp Aps.
         </p>
 
         <p

@@ -7,14 +7,16 @@
         v-observe-visibility="animateTextIn"
         data-theme="dark"
       >
-        Hello! I'm Dan Traian! I have a passion for building highly polished user experiences, and enjoy seeing them
-        developed to the very end. I strive to work in cross-disciplinary teams to innovate and deliver!
+        Hello! I'm Dan Traian! I have a passion for building highly polished user
+        experiences, and enjoy seeing them developed to the very end. I strive to work in
+        cross-disciplinary teams to innovate and deliver!
       </p>
     </div>
   </section>
 </template>
 <script>
 import { globalMixin } from "../../mixins/GlobalMixin";
+
 export default {
   mixins: [globalMixin],
 

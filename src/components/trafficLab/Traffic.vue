@@ -12,7 +12,12 @@
 
       <div class="w-full text-sm text-center py-2 hidden lg:block">
         Illustrations from
-        <a href="https://www.opendoodles.com/" target="_blank" class="link link-reset bold">Open Doodle</a>
+        <a
+          href="https://www.opendoodles.com/"
+          target="_blank"
+          class="link link-reset bold"
+          >Open Doodle</a
+        >
       </div>
     </div>
   </div>
