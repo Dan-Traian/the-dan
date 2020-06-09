@@ -30,6 +30,8 @@
 
       <competences class="hidden lg:block py-20 lg:py-48"></competences>
 
+      <showcase class="hidden lg:block py-20 lg:py-48"></showcase>
+
       <contact></contact>
     </div>
   </div>
@@ -42,6 +44,7 @@ import WhatNow from "./WhatNow";
 import Background from "./Background";
 import Contact from "./Contact";
 import Competences from "./Competences";
+import Showcase from "./Showcase";
 
 export default {
   components: {
@@ -51,6 +54,7 @@ export default {
     background: Background,
     contact: Contact,
     competences: Competences,
+    showcase: Showcase,
   },
   computed: {},
   data() {

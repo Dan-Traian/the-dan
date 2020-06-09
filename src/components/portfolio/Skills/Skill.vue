@@ -65,21 +65,7 @@ export default {
   display: inline-block;
   position: relative;
   width: 100%;
-  &:before,
-  &:after {
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-color: rgba(65, 8, 7, 0.5);
-    transform: scaleX(5);
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
 
-  &:after {
-    top: 100%;
-  }
   &:hover {
     .skill-box {
       opacity: 1;
