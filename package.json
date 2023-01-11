@@ -12,7 +12,7 @@
     "axios": "^0.19.0",
     "core-js": "^2.6.5",
     "gsap": "^3.2.6",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "rivescript": "^2.1.0",
     "vue": "^2.6.10",
     "vue-kinesis": "^1.1.5",
